@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="index.html">🛍️ ShopNest</a>
+    <a href="index.html">Back to Shop</a>
+</header>
+
+<main class="auth">
+
+    <form data-validate>
+
+        <h1>Welcome Back</h1>
+
+        <label>Email
+            <input type="email" required data-rule="email"
+                   placeholder="Enter email">
+            <small class="error"></small>
+        </label>
+
+        <label>Password
+            <input type="password" id="loginPassword"
+                   required placeholder="Enter password">
+        </label>
+
+        <label>
+            <input type="checkbox"
+                   onclick="document.getElementById('loginPassword').type=this.checked?'text':'password'">
+            Show Password
+        </label>
+
+        <button class="btn" type="submit">Sign In</button>
+
+        <p>New user?
+            <a href="register.html">Create Account</a>
+        </p>
+
+    </form>
+
+</main>
+
+<script src="validation.js"></script>
+
+</body>
+</html>

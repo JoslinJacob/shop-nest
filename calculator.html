@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="index.html">ShopNest</a>
+    <a href="home.html">Dashboard</a>
+</header>
+
+<main class="auth">
+
+    <section>
+
+        <h2>JavaScript Calculator</h2>
+
+        <input id="display" class="display"
+               readonly value="0">
+
+        <div class="calcgrid">
+
+            <button onclick="add('7')">7</button>
+            <button onclick="add('8')">8</button>
+            <button onclick="add('9')">9</button>
+            <button onclick="add('/')">÷</button>
+
+            <button onclick="add('4')">4</button>
+            <button onclick="add('5')">5</button>
+            <button onclick="add('6')">6</button>
+            <button onclick="add('*')">×</button>
+
+            <button onclick="add('1')">1</button>
+            <button onclick="add('2')">2</button>
+            <button onclick="add('3')">3</button>
+            <button onclick="add('-')">−</button>
+
+            <button onclick="add('0')">0</button>
+            <button onclick="add('.')">.</button>
+            <button onclick="clearCalc()">C</button>
+            <button onclick="calculate()">=</button>
+
+            <button onclick="add('+')">+</button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>

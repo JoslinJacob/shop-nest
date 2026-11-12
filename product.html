@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - SmartCart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">🛍 SmartCart</a>
+
+    <a href="index.html" class="back-link">← Continue Shopping</a>
+
+    <button class="cart-btn" onclick="openCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+</header>
+
+<main class="details-page">
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / Product Details
+    </div>
+
+    <section id="productDetails" class="product-details-page">
+        Loading product...
+    </section>
+
+    <section class="customer-experience">
+        <h2>Customer Experience and Reviews</h2>
+        <p>See what customers think about this product.</p>
+
+        <div id="reviewSummary"></div>
+
+        <div id="reviewList"></div>
+
+        <div class="review-form">
+            <h3>Write Your Review</h3>
+            <p>Share your experience with this product.</p>
+
+            <input type="text" id="reviewerName"
+                   placeholder="Enter your name">
+
+            <label for="reviewRating">Select your rating:</label>
+
+            <select id="reviewRating">
+                <option value="5">★★★★★ - Excellent</option>
+                <option value="4">★★★★☆ - Very Good</option>
+                <option value="3">★★★☆☆ - Good</option>
+                <option value="2">★★☆☆☆ - Fair</option>
+                <option value="1">★☆☆☆☆ - Poor</option>
+            </select>
+
+            <textarea id="reviewComment"
+                      placeholder="Write your experience..."></textarea>
+
+            <button onclick="submitProductReview()">
+                Submit Review
+            </button>
+        </div>
+    </section>
+
+    <section class="cart-section" id="cartSection">
+        <h2>🛒 Your Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <h3 id="cartTotal">Total: ₹0</h3>
+        <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+    </section>
+
+</main>
+
+<footer>
+    <h2>SmartCart</h2>
+    <p>Simple Shopping. Smart Choices.</p>
+    <p>© 2026 SmartCart. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

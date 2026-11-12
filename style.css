@@ -1,0 +1,559 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --text: #202938;
+    --muted: #687386;
+    --blue: #1769aa;
+    --navy: #172f4f;
+    --gold: #ffc247;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+body.dark {
+    --bg: #101a29;
+    --surface: #1c2b3e;
+    --text: #edf3fb;
+    --muted: #b6c1d0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    background: var(--blue);
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background: var(--navy);
+    color: white;
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav, .actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 11px 16px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.gold {
+    background: var(--gold);
+    color: #172f4f;
+}
+
+.danger {
+    background: #d44;
+}
+
+.menu {
+    display: none;
+}
+
+.hero {
+    padding: 65px 9%;
+    background: linear-gradient(120deg, #dceaff, #f7f9ff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+}
+
+.dark .hero {
+    background: #203650;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #172f4f;
+    margin: 15px 0;
+}
+
+.dark .hero h1 {
+    color: white;
+}
+
+.hero h1 span {
+    color: #1769aa;
+}
+
+.hero p {
+    color: #596579;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.heroemoji {
+    font-size: 110px;
+}
+
+.section {
+    padding: 45px 6%;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.features article {
+    background: var(--surface);
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 18px #142a4610;
+}
+
+.features article h3 {
+    margin: 10px 0;
+}
+
+.features article p {
+    color: var(--muted);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.toolbar input,
+.toolbar select {
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.toolbar > input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.filters button,
+.suggestions button {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid #ccd3df;
+    border-radius: 22px;
+}
+
+.filters button.active {
+    background: var(--blue);
+    color: white;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0001;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: white;
+}
+
+.cardbody {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardbody small {
+    color: var(--blue);
+}
+
+.cardbody h3 {
+    margin: 7px 0;
+}
+
+.cardbody p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 5px 0;
+    min-height: 38px;
+}
+
+.stars {
+    color: #e9a21a;
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.cardbuttons {
+    display: flex;
+    gap: 7px;
+    margin-top: auto;
+}
+
+.cardbuttons button {
+    flex: 1;
+    font-size: 12px;
+    padding: 9px 5px;
+}
+
+.cardbuttons button:first-child {
+    background: var(--gold);
+    color: #172f4f;
+}
+
+.cart {
+    background: var(--surface);
+    margin: 20px 6%;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.cartbottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.cartrow {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cartrow button {
+    padding: 5px 8px;
+}
+
+.assistant {
+    background: var(--surface);
+    max-width: 850px;
+    margin: 30px auto;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.chat {
+    height: 230px;
+    overflow-y: auto;
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bot-message,
+.user-message {
+    padding: 10px 13px;
+    border-radius: 10px;
+    max-width: 85%;
+    white-space: pre-wrap;
+}
+
+.bot-message {
+    background: var(--surface);
+    align-self: flex-start;
+}
+
+.user-message {
+    background: var(--blue);
+    color: white;
+    align-self: flex-end;
+}
+
+.suggestions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+}
+
+.chatinput {
+    display: flex;
+    gap: 8px;
+}
+
+.chatinput input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+}
+
+footer {
+    text-align: center;
+    background: var(--navy);
+    color: white;
+    padding: 25px;
+    line-height: 2;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    background: var(--surface);
+    padding: 22px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.detail img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: white;
+}
+
+.detail h1 {
+    margin: 15px 0;
+}
+
+.detail h2 {
+    color: var(--blue);
+    margin: 15px 0;
+}
+
+#reviewForm {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+#reviewForm input,
+#reviewForm select,
+#reviewForm textarea {
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+}
+
+#reviewForm textarea {
+    min-height: 90px;
+}
+
+.review {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.auth {
+    min-height: 75vh;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+}
+
+.auth form {
+    width: min(440px, 100%);
+    display: grid;
+    gap: 12px;
+    background: var(--surface);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.auth label {
+    display: grid;
+    gap: 5px;
+}
+
+.auth input,
+.auth select {
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+}
+
+.auth input[type="checkbox"] {
+    width: auto;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.display {
+    width: 100%;
+    font-size: 25px;
+    padding: 12px;
+    margin: 12px 0;
+}
+
+.calcgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.calcgrid button {
+    padding: 16px;
+}
+
+.empty {
+    padding: 20px;
+    color: var(--muted);
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 950px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 40px 6%;
+        text-align: center;
+    }
+
+    .heroemoji {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .products,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 30px 4%;
+    }
+
+    .cart {
+        margin: 15px 4%;
+    }
+
+    .cartrow {
+        flex-direction: column;
+    }
+
+    .chatinput {
+        flex-direction: column;
+    }
+}

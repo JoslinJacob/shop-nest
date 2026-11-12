@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="index.html">🛍️ ShopNest</a>
+    <a href="index.html">Back</a>
+</header>
+
+<main class="auth">
+
+    <form data-validate>
+
+        <h1>Sign Up</h1>
+
+        <label>Email
+            <input type="email" required data-rule="email"
+                   placeholder="Enter email">
+        </label>
+
+        <label>Password
+            <input type="password" required data-rule="password"
+                   placeholder="Create password">
+        </label>
+
+        <label>
+            <input type="checkbox" required>
+            I agree to the demo terms.
+        </label>
+
+        <button class="btn" type="submit">Sign Up</button>
+
+        <p>Already have an account?
+            <a href="signin.html">Sign In</a>
+        </p>
+
+    </form>
+
+</main>
+
+<script src="validation.js"></script>
+
+</body>
+</html>

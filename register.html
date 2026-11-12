@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="index.html">🛍️ ShopNest</a>
+    <a href="index.html">Back to Shop</a>
+</header>
+
+<main class="auth">
+
+    <form data-validate>
+
+        <h1>Create Account</h1>
+
+        <label>Full Name
+            <input type="text" required data-rule="name"
+                   placeholder="Enter your name">
+            <small class="error"></small>
+        </label>
+
+        <label>Register ID
+            <input type="text" required data-rule="id"
+                   placeholder="Enter register ID">
+            <small class="error"></small>
+        </label>
+
+        <label>Email
+            <input type="email" required data-rule="email"
+                   placeholder="Enter email">
+            <small class="error"></small>
+        </label>
+
+        <label>Mobile Number
+            <input type="tel" required data-rule="phone"
+                   placeholder="10-digit mobile number">
+            <small class="error"></small>
+        </label>
+
+        <label>Division
+            <select required>
+                <option value="">Select Division</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>B3</option>
+                <option>B4</option>
+            </select>
+        </label>
+
+        <label>Password
+            <input type="password" id="password"
+                   required data-rule="password"
+                   placeholder="Create password">
+            <small class="error"></small>
+        </label>
+
+        <label>Confirm Password
+            <input type="password" id="confirmPassword"
+                   required placeholder="Confirm password">
+            <small class="error"></small>
+        </label>
+
+        <button class="btn" type="submit">Register</button>
+
+        <p>Already registered?
+            <a href="signin.html">Sign In</a>
+        </p>
+
+    </form>
+
+</main>
+
+<script src="validation.js"></script>
+
+</body>
+</html>
